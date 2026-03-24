@@ -13,8 +13,15 @@ public class CommonToAllPage {
         getDriver().get(PropertiesReader.readKey("url"));
     }
 
-    public void clickElement(By by) {
+    public void openKatalonUrl(){
+        getDriver().get(PropertiesReader.readKey("katalon_url"));
+    }
+
+    public void clickElement(By by){
         getDriver().findElement(by).click();
+    }
+    public void clickElement(WebElement element){
+        element.click();
     }
 
     public void enterInput(By by, String key) {
@@ -25,11 +32,11 @@ public class CommonToAllPage {
         by.sendKeys(key);
     }
 
-    public String getText(By by) {
+    public String getText(By by){
         return getDriver().findElement(by).getText();
     }
 
-    public String getText(WebElement by) {
+    public String getText(WebElement by){
         return by.getText();
     }
 }

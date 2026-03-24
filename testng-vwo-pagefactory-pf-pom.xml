@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="TestVWO_TestVWOLogin_03_PF.java">
+        <classes>
+            <class name="com.seleniumproject.tests.VWO.TestVWOLogin_03_PF">
+                <methods>
+                    <include name="testLoginNegativeVWO_PF"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

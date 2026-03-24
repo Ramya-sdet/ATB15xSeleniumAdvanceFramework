@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="TestVWOLogin_07_TakeScreen_Retry_Prop_Improved_POM.java">
+        <classes>
+            <class name="com.seleniumproject.tests.VWO.TestVWOLogin_07_TakeScreen_Retry_Prop_Improved_POM">
+                <methods>
+                    <include name="testFail"/>
+                    <include name="testPass"/>
+                    <include name="testFailInvalidTitle"/>
+                    <include name="testFailElementNotFound"/>
+                    <include name="testFailWrongURL"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
