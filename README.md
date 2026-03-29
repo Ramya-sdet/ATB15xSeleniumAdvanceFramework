@@ -36,9 +36,7 @@ end
     subgraph TestClasses
         direction TB
         VWOTests["VWO Tests"]
-        TTABankTests["TTA Bank Tests"]
         KatalonTests["Katalon Tests"]
-        OrangeHRMTests["OrangeHRM Tests"]
     end
 
     subgraph CoreLayer["🔧 Core Layer"]
@@ -57,7 +55,6 @@ end
         direction TB
         VWOLoginPage["LoginPage"]
         VWODashboardPage["DashboardPage"]
-        TTABankPages["TTA Bank Pages"]
     end
 
     subgraph PFPages
@@ -123,7 +120,7 @@ end
 ATB15xSeleniumAdvanceFramework/
 ├── src/
 │   ├── main/
-│   │   ├── java/com/thetestingacademy/
+│   │   ├── java/com/seleniumProject/
 │   │   │   ├── base/
 │   │   │   │   └── CommonToAll.java          # Base class with common actions
 │   │   │   ├── driver/
@@ -132,10 +129,7 @@ ATB15xSeleniumAdvanceFramework/
 │   │   │   │   ├── POM/                      # Page Object Model implementations
 │   │   │   │   │   ├── vwo/
 │   │   │   │   │   │   ├── normal_POM/       # Standard POM pages
-│   │   │   │   │   │   └── improved_POM/     # Enhanced POM pages
-│   │   │   │   │   ├── TTABank/              # TTA Bank page objects
-│   │   │   │   │   └── katalonStudio/        # Katalon page objects
-│   │   │   │   └── PF/                       # Page Factory implementations
+│   │   │   │   │   │   └── improved_POM/     # Page Factory implementations
 │   │   │   │       └── vwo/
 │   │   │   └── utils/
 │   │   │       ├── PropertiesReader.java     # Configuration reader
@@ -144,7 +138,7 @@ ATB15xSeleniumAdvanceFramework/
 │   │       ├── data.properties               # Test configuration
 │   │       └── log4j2.xml                    # Logging configuration
 │   └── test/
-│       ├── java/com/thetestingacademy/
+│       ├── java/com/seleniumProject/
 │       │   ├── baseTest/
 │       │   │   └── CommonToAllTest.java      # Base test with setup/teardown
 │       │   ├── listeners/
@@ -152,11 +146,7 @@ ATB15xSeleniumAdvanceFramework/
 │       │   │   ├── RetryListener.java        # Retry annotation transformer
 │       │   │   └── ScreenshotListener.java   # Failure screenshot capture
 │       │   ├── tests/
-│       │   │   ├── vwo/                      # VWO application tests
-│       │   │   ├── TTABank/                  # TTA Bank tests
-│       │   │   ├── orangeHRM/                # OrangeHRM tests
-│       │   │   ├── katalonStudio/            # Katalon tests
-│       │   │   └── idrive/                   # IDrive tests
+│       │   │   ├── vwo/                      # VWO application tests                  
 │       │   └── utilsExcel/
 │       │       └── UtilExcel.java            # Excel data reader
 │       └── resources/
@@ -285,12 +275,7 @@ Page Factory	pages/PF/* with @FindBy	Lazy initialization of web elements
 Singleton-like	DriverManager	Single point of driver management
 Factory Pattern	DriverManager.init()	Creates browser instances based on config
 Listener Pattern	TestNG Listeners	Event-driven test execution hooks
-🖼️ Screenshots
-Screenshot 2023-10-31 at 12 27 14 PM Screenshot 2023-10-31 at 12 27 28 PM
-🐳 Selenoid - Docker Grid Running
-Selenoid is a powerful tool for running Selenium tests in Docker containers.
-It helps manage and scale test automation infrastructure efficiently.
-Screenshot 2024-06-13 at 15 56 21
+
 
 🚀 How to Run
 mvn test -Dsurefire.suiteXmlFiles=testng.xml
